@@ -77,6 +77,7 @@ void showAlpha(char str[], char *alpha){
         printf("%c", alpha[i]);
     }
     printf("\n");
+    free(alpha);
 }
 
 int powerExt(int param, int exp){
@@ -85,4 +86,34 @@ int powerExt(int param, int exp){
         aux*=param;
     }
     return aux;
+}
+
+void giveZeroes(char **str_reference, int length){
+    char *aux = (*str_reference);
+    for(int i = MAX_LENGTH-length, j = 0; i<MAX_LENGTH; i++, j++){
+        (*str_reference)[i] = aux[j];
+    }
+    for(int i = 0; i<MAX_LENGTH-length; i++){
+            (*str_reference)[i] = '0';
+    }
+}
+
+void giveZeroesInteger(int **arr_reference, int length){
+    int *aux = (*arr_reference);
+    for(int i = MAX_LENGTH - length, j=0; i< MAX_LENGTH; i++, j++){
+        (*arr_reference)[i] = aux[j];
+    }
+    for(int i = 0; i<MAX_LENGTH; i++){
+        (*arr_reference)[i] = 0;
+    }
+}
+
+void show_menu(){
+    printf("0 - sair\n");
+    printf("1 - Decimal\n");
+    printf("2 - Binária\n");
+    printf("3 - Hexadecimal\n");
+    printf("4 - complemento de 1\n");
+    printf("5 - complemento de 2\n");
+    printf("Digite a opção de base desejada: ");
 }

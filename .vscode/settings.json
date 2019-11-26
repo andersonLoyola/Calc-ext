@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "binary.h": "c",
+        "hexadecimal.h": "c"
+    }
+}
