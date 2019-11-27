@@ -71,6 +71,7 @@ char encodeHex(int number_hex){
 
     }
 }
+
 void showAlpha(char str[], char *alpha){
     printf("Número em %s:\n", str);
     for(int i = 0; i<MAX_LENGTH; i++){

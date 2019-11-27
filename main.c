@@ -2,6 +2,7 @@
 #include "decimal.h"
 #include "binary.h"
 #include "hexadecimal.h"
+#include "signed_one.h"
 int main(void){
     int opt = 1;
     while(opt){
@@ -22,7 +23,7 @@ int main(void){
                 hexInterface();
                 break;
             case 4:
-                printf("Em implementação\n");
+                signedOneInterface();
                 break;
             case 5:
                 printf("Em implementação 2\n");
